@@ -101,7 +101,7 @@ email.addEventListener('mouseleave', (e) => {
 
 footer.addEventListener('mouseenter', (e) => {
   footerText.innerHTML =
-    'Made with &#128513;, &#9748;, and &#10084; in in Birmingham, UK.'
+    'Made with &#128513;, &#9748;, and &#10084; in Birmingham, UK.'
 })
 
 footer.addEventListener('mouseleave', (e) => {
