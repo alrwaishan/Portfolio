@@ -1,0 +1,274 @@
+/*  Universal Styles  */
+
+* {
+  padding: 0 0;
+  margin: 0 0;
+  /*border: 1px solid lightblue;*/
+  font-family: 'Overpass', sans-serif;
+}
+
+section {
+  max-width: 60rem;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+
+/*  Font Styles  */
+h1 {
+  font-family: monospace;
+  font-size: 5rem;
+  margin: 3rem;
+  cursor: default;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+/*  Main  */
+
+main {
+  background-color: #0d47a1;
+  color: #fff;
+  transition: all 2s;
+}
+
+/*  Header  */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #002171;
+  border-bottom: 3px solid #a5d6a7;
+  transition: all 2s;
+}
+
+.logo a {
+  margin: 0.75rem 1.5rem;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3rem;
+  color: #a5d6a7;
+  transition: color 0.25s, text-shadow 0.25s;
+  text-decoration: none;
+}
+
+nav {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 875px) {
+  nav {
+    display: none;
+  }
+
+  header {
+    justify-content: center;
+  }
+}
+
+nav li {
+  display: inline;
+  font-size: 1.75rem;
+  margin-right: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #a5d6a7;
+  font-weight: lighter;
+  transition: color 0.25s;
+}
+
+/*  About Me  */
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-me h1 {
+  font-family: 'Nova Mono', monospace;
+}
+
+.about-me p {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.prof-pic-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 400px;
+  width: auto;
+}
+
+.profile-pic-cropper {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #a5d6a7;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.profile-pic-cropper:hover {
+  transform: scale(1.2);
+}
+
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+  margin-left: 0%;
+  height: 100%;
+  width: auto;
+}
+
+.prof-pic-container p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*  Projects  */
+
+/*  Skills  */
+
+.skill-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-gallery .card {
+  height: 5rem;
+  width: 5rem;
+  margin: 1rem;
+  text-align: center;
+  display: inline-block;
+  animation: animationOut 0.5s ease-in-out forwards;
+  cursor: pointer;
+}
+
+.skill-gallery .card:hover {
+  animation: animationIn 0.5s ease-in-out forwards;
+}
+
+.skill-gallery p {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate3d(0, 1, 0, 180deg);
+  animation: visibleOff 0.5s ease-in-out both;
+  visibility: hidden;
+}
+
+.skill-gallery .card:hover > p {
+  animation: visibleOn 0.5s ease-in-out both;
+}
+
+.skill-gallery img {
+  width: 100%;
+  animation: visibleOn 0.5s ease-in-out both;
+}
+
+.skill-gallery .card:hover > img {
+  animation: visibleOff 0.5s ease-in-out both;
+}
+
+@keyframes animationIn {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+}
+
+@keyframes animationOut {
+  0% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
+
+@keyframes visibleOn {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes visibleOff {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+/*  Contact  */
+
+.contact .button-container {
+  background-color: #a5d6a7;
+  display: inline-flex;
+  padding: 1rem 1rem;
+  align-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  transition: background-color 0.5s;
+}
+
+.contact a {
+  text-decoration: none;
+}
+
+.contact i {
+  color: black;
+  font-size: 2rem;
+}
+
+.contact .button-container p {
+  color: black;
+  margin-left: 1rem;
+}
+
+/*  Footer  */
+footer {
+  background-color: #5472d3;
+  display: flex;
+  justify-content: center;
+  cursor: default;
+  transition: all 2s;
+}
+
+footer p {
+  text-align: center;
+  margin: 1rem auto;
+}
